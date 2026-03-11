@@ -1,0 +1,403 @@
+@import url('/fonts/aspekta.css');
+@import url('https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800|space-grotesk:400,500,600,700');
+
+/* Force Aspekta on everything */
+html {
+  font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+body {
+  font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+#root {
+  font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+* {
+  font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Botpress Exact Colors - Pure Black Theme */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 0 0% 3%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 0 0% 3%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.5rem;
+
+    --hero-gradient: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050a10 100%);
+    --glass-bg: rgba(0, 0, 0, 0.4);
+    --glass-border: rgba(0, 217, 255, 0.15);
+    --glow-primary: 0 0 60px rgba(0, 217, 255, 0.5);
+    --card-gradient: linear-gradient(145deg, #0a0a0a 0%, #050505 100%);
+    --accent-gradient: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 0 0% 3%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 10%;
+    --sidebar-ring: 180 100% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 0 0% 3%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 180 100% 50%;
+    --accent-foreground: 0 0% 3%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
+    --ring: 180 100% 50%;
+    --card-gradient: linear-gradient(145deg, #0a0a0a 0%, #050505 100%);
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 0 0% 3%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 10%;
+    --sidebar-ring: 180 100% 50%;
+  }
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: auto; /* Changed from smooth to prevent clash with Lenis */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  }
+
+
+  p, a, span, div, button, input, textarea, label {
+    font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(0, 217, 255, 0.12);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-elevated {
+    background: linear-gradient(145deg, rgba(10, 10, 10, 0.7) 0%, rgba(5, 5, 5, 0.7) 100%);
+    border: 1px solid rgba(0, 217, 255, 0.12);
+    @apply shadow-sm transition-all duration-300;
+    backdrop-filter: blur(10px);
+  }
+
+  .card-elevated:hover {
+    border-color: rgba(0, 217, 255, 0.35);
+    box-shadow: 0 0 35px rgba(0, 217, 255, 0.25);
+    @apply shadow-md;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 60px rgba(0, 217, 255, 0.5);
+  }
+
+  .btn-primary {
+    @apply px-7 py-3 rounded-lg text-black font-bold text-sm transition-all duration-300 uppercase tracking-wide;
+    background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.4);
+  }
+
+  .btn-primary:hover {
+    @apply shadow-xl;
+    box-shadow: 0 0 60px rgba(0, 217, 255, 0.6);
+    transform: scale(1.03);
+  }
+
+  .btn-secondary {
+    @apply px-7 py-3 rounded-lg font-bold text-sm transition-all duration-300 uppercase tracking-wide;
+    border: 2px solid rgba(0, 217, 255, 0.3);
+    color: #00d9ff;
+    background-color: rgba(0, 217, 255, 0.05);
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(0, 217, 255, 0.6);
+    background-color: rgba(0, 217, 255, 0.15);
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0px) translateX(0px); 
+    }
+    33% { 
+      transform: translateY(-25px) translateX(10px);
+    }
+    66% { 
+      transform: translateY(-15px) translateX(-8px);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% { 
+      box-shadow: 0 0 25px rgba(0, 217, 255, 0.3), 0 0 60px rgba(0, 217, 255, 0.1); 
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(0, 217, 255, 0.6), 0 0 80px rgba(0, 217, 255, 0.2); 
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% { 
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes slide-up {
+    from { 
+      opacity: 0; 
+      transform: translateY(40px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  @keyframes fade-in-up {
+    from { 
+      opacity: 0; 
+      transform: translateY(50px);
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .text-cyan {
+    @apply text-cyan-300;
+  }
+
+  .text-cyan-bright {
+    color: #00d9ff;
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.4), 0 0 80px rgba(0, 217, 255, 0.15);
+  }
+
+  .shadow-glow-lg {
+    box-shadow: 0 0 60px rgba(0, 217, 255, 0.6), 0 0 120px rgba(0, 217, 255, 0.25);
+  }
+
+  .border-cyan-glow {
+    border-color: rgba(0, 217, 255, 0.2);
+  }
+
+  .border-cyan-glow-hover:hover {
+    border-color: rgba(0, 217, 255, 0.5);
+  }
+
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(145deg, rgba(10, 10, 10, 0.8) 0%, rgba(5, 5, 5, 0.8) 100%);
+    border: 1px solid rgba(0, 217, 255, 0.15);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.3) 0%, rgba(0, 153, 204, 0.1) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .gradient-border:hover::before {
+    opacity: 1;
+  }
+
+  /* Aspekta Default Classes */
+  .font-display {
+    font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  }
+
+  .font-body {
+    font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  }
+
+  .font-aspekta {
+    font-family: 'Aspekta', 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  }
+
+  .aspekta-bold {
+    font-family: 'Aspekta' !important;
+    font-weight: 800;
+  }
+
+  .aspekta-semibold {
+    font-family: 'Aspekta' !important;
+    font-weight: 600;
+  }
+
+  .aspekta-medium {
+    font-family: 'Aspekta' !important;
+    font-weight: 500;
+  }
+
+  .aspekta-regular {
+    font-family: 'Aspekta';
+    font-weight: 400;
+  }
+
+  .aspekta-light {
+    font-family: 'Aspekta';
+    font-weight: 300;
+  }
+
+  /* GPU acceleration for backdrop-filter elements */
+  .backdrop-blur-2xl,
+  .backdrop-blur-xl,
+  [style*="backdrop-filter"] {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Responsive touch targets */
+  @media (pointer: coarse) {
+    a, button {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
