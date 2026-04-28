@@ -9,9 +9,13 @@ interface BlurRevealProps {
   y?: number;
 }
 
-const BlurReveal = ({ children, delay = 0, duration = 0.7, className = "", y = 20 }: BlurRevealProps) => {
+/**
+ * Scroll-triggered reveal with fade + slide up.
+ * Uses a snappy ease-out curve that starts moving immediately.
+ */
+const BlurReveal = ({ children, delay = 0, duration = 0.45, className = "", y = 14 }: BlurRevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isInView = useInView(ref, { once: true, margin: "-40px" });
 
   return (
     <motion.div
@@ -31,7 +35,7 @@ const BlurReveal = ({ children, delay = 0, duration = 0.7, className = "", y = 2
       transition={{
         duration,
         delay,
-        ease: [0.25, 0.4, 0.25, 1],
+        ease: [0.16, 1, 0.3, 1],
       }}
     >
       {children}

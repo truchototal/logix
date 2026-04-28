@@ -5,8 +5,8 @@ import { Code, Palette, LineChart, ArrowRight } from "lucide-react";
 import BlurReveal from "@/components/shared/BlurReveal";
 import { Link } from "react-router-dom";
 
-const sc: Variants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.2 } } };
-const si: Variants = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] } } };
+const sc: Variants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0 } } };
+const si: Variants = { hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } } };
 
 const Equipo = () => {
   const { t } = useLanguage();

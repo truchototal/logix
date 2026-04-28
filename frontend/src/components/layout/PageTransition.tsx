@@ -13,7 +13,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       exit={{ opacity: 0, y: -8 }}
       transition={{
         duration: 0.35,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.16, 1, 0.3, 1],
       }}
       style={{ willChange: "opacity, transform" }}
     >
