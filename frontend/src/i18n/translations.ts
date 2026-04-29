@@ -285,27 +285,21 @@ export const translations: Translations = {
   "plans.enterprise.f6": { en: "Unlimited revisions + monthly strategy meeting", es: "Revisiones ilimitadas + reunión mensual de estrategia" },
   "plans.enterprise.f7": { en: "Permanent priority support", es: "Soporte prioritario permanente" },
 
-  // Planes page — Testimonials
+  // Plans page — Testimonials
   "plans.testimonials.label": { en: "CLIENT TESTIMONIALS", es: "TESTIMONIOS DE CLIENTES" },
   "plans.testimonials.title": { en: "What our clients say", es: "Lo que dicen nuestros clientes" },
   "plans.testimonials.1.text": {
-    en: "Since we implemented Logix, we stopped losing clients from unanswered messages. Everything runs on autopilot now.",
-    es: "Desde que implementamos Logix dejamos de perder clientes por mensajes sin responder. Todo funciona en piloto automático.",
+    en: "We used to lose clients every day because no one was available to respond. With Logix's system, we started receiving appointments directly in our calendar without doing anything.",
+    es: "Antes perdíamos consultas todos los días porque no teníamos a nadie para responder. Con el sistema de Logix empezamos a recibir turnos directamente en el calendario, sin hacer nada",
   },
-  "plans.testimonials.1.name": { en: "Pet's Shop", es: "Pet's Shop" },
-  "plans.testimonials.1.role": { en: "Plottier", es: "Plottier" },
+  "plans.testimonials.1.name": { en: "Pet's Life", es: "Pet's Life" },
+  "plans.testimonials.1.role": { en: "Plottier - Neuquén", es: "Plottier - Neuquén" },
   "plans.testimonials.2.text": {
-    en: "The booking system they built for us saves us hours every week. Our clients love being able to book online.",
-    es: "El sistema de turnos que nos armaron nos ahorra horas cada semana. Nuestros clientes aman poder reservar online.",
+    en: "We used to have interested people messaging us but never got back to them because we took too long to respond. Now the system filters them, responds instantly, and schedules the visit automatically. We closed 2 extra car sales in the first month.",
+    es: "Teníamos interesados que nos escribían y nunca respondian porque tardábamos en responder. Ahora el sistema los filtra, les responde al instante y agenda la visita solo. Cerramos 2 autos más en el primer mes",
   },
-  "plans.testimonials.2.name": { en: "Concesionario", es: "Concesionario" },
+  "plans.testimonials.2.name": { en: "Ambrosino Automotores", es: "Ambrosino Automotores" },
   "plans.testimonials.2.role": { en: "Neuquén", es: "Neuquén" },
-  "plans.testimonials.3.text": {
-    en: "We connected 3 apps and now our sales pipeline is completely automated. Best investment we made this year.",
-    es: "Conectamos 3 apps y ahora nuestro embudo de ventas está completamente automatizado. La mejor inversión del año.",
-  },
-  "plans.testimonials.3.name": { en: "E-commerce Agency", es: "Agencia de E-commerce" },
-  "plans.testimonials.3.role": { en: "Pro Plan Client", es: "Cliente Plan Pro" },
 
   // Planes page — CTA
   "plans.cta.title": { en: "Ready to scale your business?", es: "¿Listo para escalar tu negocio?" },

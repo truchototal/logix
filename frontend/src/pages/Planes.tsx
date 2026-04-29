@@ -88,7 +88,6 @@ const Planes = () => {
   const testimonials = [
     { textKey: "plans.testimonials.1.text", nameKey: "plans.testimonials.1.name", roleKey: "plans.testimonials.1.role" },
     { textKey: "plans.testimonials.2.text", nameKey: "plans.testimonials.2.name", roleKey: "plans.testimonials.2.role" },
-    { textKey: "plans.testimonials.3.text", nameKey: "plans.testimonials.3.name", roleKey: "plans.testimonials.3.role" },
   ];
 
   const faqs = [

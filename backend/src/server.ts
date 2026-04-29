@@ -1,5 +1,5 @@
 import app from "./app.js";
-import { PORT, NODE_ENV } from "./config/env.js";
+import { PORT, NODE_ENV } from "./config/env";
 
 /**
  * Logix API Server
